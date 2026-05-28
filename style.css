@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #edf7ed;
+  color: #234d20;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+body.darkMode {
+  background: #1c1c1c;
+  color: white;
+}
+
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.top-banner h1 {
+  font-size: 2rem;
+}
+
+#themeToggleBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
