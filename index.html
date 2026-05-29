@@ -21,66 +21,71 @@
     </header>
 
 
-        <!-- FORM SECTION -->
-        <section class="plant-form-section">
+    <!-- FORM SECTION -->
+    <section class="plant-form-section">
 
-            <form id="plantTrackerForm">
+        <form id="plantTrackerForm">
 
-                <input type="text" id="plantNameInput" placeholder="Plant Name" required minlength="2" />
+            <input type="text" id="plantNameInput" placeholder="Plant Name" required minlength="2" />
 
-                <select id="sunlightSelect" required>
-                    <option value="">Sunlight Need</option>
-                    <option value="Low Light">Low Light</option>
-                    <option value="Medium Light">Medium Light</option>
-                    <option value="Bright Light">Bright Light</option>
-                </select>
+            <select id="sunlightSelect" required>
+                <option value="">Sunlight Need</option>
+                <option value="Low Light">Low Light</option>
+                <option value="Medium Light">Medium Light</option>
+                <option value="Bright Light">Bright Light</option>
+            </select>
 
-                <input type="number" id="waterInput" placeholder="Water Every X Days" min="1" max="30" class="waterInput" required />
+            <input type="number" id="waterInput" placeholder="Water Every X Days" min="1" max="30" class="waterInput"
+                required />
 
-                <button type="submit">
-                    Add Plant
-                </button>
-
-            </form>
-
-            <p id="validationMessage"></p>
-
-        </section>
-
-        <!-- SEARCH + FILTER -->
-        <section class="control-panel">
-
-            <input type="text" id="searchPlantInput" placeholder="Search plants..." />
-
-            <button class="filterButton" data-light="All">
-                All
+            <button type="submit">
+                Add Plant
             </button>
 
-            <button class="filterButton" data-light="Low Light">
-                Low Light
-            </button>
+        </form>
 
-            <button class="filterButton" data-light="Medium Light">
-                Medium Light
-            </button>
+        <p id="validationMessage"></p>
 
-            <button class="filterButton" data-light="Bright Light">
-                Bright Light
-            </button>
+    </section>
 
-        </section>
+    <!-- SEARCH + FILTER -->
+    <section class="control-panel">
 
-         <!-- STATS -->
-        <section class="stats-section">
+        <input type="text" id="searchPlantInput" placeholder="Search plants..." />
 
-            <h2 id="plantCounterText">
-                Total Plants: 0
-            </h2>
+        <button class="filterButton" data-light="All">
+            All
+        </button>
 
-        </section>
+        <button class="filterButton" data-light="Low Light">
+            Low Light
+        </button>
 
+        <button class="filterButton" data-light="Medium Light">
+            Medium Light
+        </button>
 
-   
+        <button class="filterButton" data-light="Bright Light">
+            Bright Light
+        </button>
+
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+
+        <h2 id="plantCounterText">
+            Total Plants: 0
+        </h2>
+
+    </section>
+
+    <!-- CARD CONTAINER -->
+    <section class="plantCardContainer">
+
+    </section>
+
+    </main>
 
 </body>
 

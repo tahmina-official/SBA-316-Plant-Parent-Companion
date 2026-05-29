@@ -77,3 +77,9 @@ button {
 .stats-section {
   margin-bottom: 20px;
 }
+
+.plantCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
