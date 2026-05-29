@@ -36,3 +36,33 @@ body.darkMode {
   cursor: pointer;
 }
 
+.plant-form-section {
+  margin-bottom: 25px;
+}
+
+#plantTrackerForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+}
+
+#waterInput {
+  width: 180px;
+}
+
+#validationMessage {
+  color: red;
+  margin-top: 10px;
+}

@@ -20,6 +20,33 @@
         </button>
     </header>
 
+
+        <!-- FORM SECTION -->
+        <section class="plant-form-section">
+
+            <form id="plantTrackerForm">
+
+                <input type="text" id="plantNameInput" placeholder="Plant Name" required minlength="2" />
+
+                <select id="sunlightSelect" required>
+                    <option value="">Sunlight Need</option>
+                    <option value="Low Light">Low Light</option>
+                    <option value="Medium Light">Medium Light</option>
+                    <option value="Bright Light">Bright Light</option>
+                </select>
+
+                <input type="number" id="waterInput" placeholder="Water Every X Days" min="1" max="30" class="waterInput" required />
+
+                <button type="submit">
+                    Add Plant
+                </button>
+
+            </form>
+
+            <p id="validationMessage"></p>
+
+        </section>
+
    
 
 </body>
