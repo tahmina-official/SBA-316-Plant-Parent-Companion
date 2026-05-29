@@ -73,3 +73,7 @@ button {
   flex-wrap: wrap;
   margin-bottom: 25px;
 }
+
+.stats-section {
+  margin-bottom: 20px;
+}
