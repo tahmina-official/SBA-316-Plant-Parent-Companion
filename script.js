@@ -31,3 +31,11 @@ const plantCardContainer =
 
 const plantCounterText =
     document.getElementById("plantCounterText");
+
+// ======================================
+// LOCAL STORAGE
+// ======================================
+
+let plantCollection =
+    JSON.parse(localStorage.getItem("plantVault"))
+    || [];
