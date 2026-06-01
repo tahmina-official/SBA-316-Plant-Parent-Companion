@@ -309,3 +309,14 @@ function filterPlants(event) {
 
   renderPlantCards(filteredPlants);
 }
+
+// ======================================
+// DARK MODE
+// ======================================
+
+function toggleThemeMode() {
+
+  document.body.classList.toggle(
+    "darkMode"
+  );
+}
