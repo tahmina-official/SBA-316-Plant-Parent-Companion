@@ -1,3 +1,4 @@
+```markdown
 # 🌱 Plant Parent Companion
 
 ## Description
@@ -18,7 +19,66 @@ Users can:
 
 ---
 
+## Features
 
+- Dynamic DOM manipulation
+- Event-driven JavaScript
+- HTML form validation
+- DOM validation
+- Dark mode
+- Responsive layout
+- Local storage support
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## DOM Features Included
+
+- getElementById
+- querySelector
+- querySelectorAll
+- createElement
+- appendChild
+- DocumentFragment
+- classList
+- innerHTML
+- setAttribute
+- parentNode navigation
+- Event listeners
+
+---
+
+## BOM Features Included
+
+- alert()
+- confirm()
+- localStorage
+
+---
+
+## How to Run
+
+1. Download all files
+2. Open index.html in browser
+
+---
+
+## Future Improvements
+
+- Plant images
+- Water reminder notifications
+- Plant categories
+- Calendar integration
+- API support
+
+```
 ## 👩‍💻 Author
 
 **Tahmina Akter**
