@@ -83,3 +83,40 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
+
+.plant-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+body.darkMode .plant-card {
+  background: #2a2a2a;
+}
+
+.plant-card:hover {
+  transform: translateY(-4px);
+}
+
+.healthyPlant {
+  border: 3px solid green;
+}
+
+.card-action-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.healthBtn {
+  background: green;
+  color: white;
+}
+
+.removeBtn {
+  background: crimson;
+  color: white;
+}
+

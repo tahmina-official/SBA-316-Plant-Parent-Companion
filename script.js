@@ -149,11 +149,49 @@ function renderPlantCards(plantArray) {
         <strong>Water Every:</strong>
         ${singlePlant.wateringDays} days
       </p>
+
+      <div class="card-action-row">
+
+        <button class="healthBtn">
+          Healthy
+        </button>
+
+        <button class="removeBtn">
+          Remove
+        </button>
+
+      </div>
     `;
 
     plantCard.setAttribute(
       "data-id",
       singlePlant.id
+    );
+
+    const healthBtn =
+      plantCard.querySelector(".healthBtn");
+
+    const removeBtn =
+      plantCard.querySelector(".removeBtn");
+
+
+    // MARK HEALTHY
+    healthBtn.addEventListener(
+      "dblclick",
+      function(event) {
+
+        const chosenCard =
+          event.target.parentNode.parentNode;
+
+        chosenCard.classList.toggle(
+          "healthyPlant"
+        );
+
+        singlePlant.healthy =
+          !singlePlant.healthy;
+
+        savePlantData();
+      }
     );
 
     cardFragment.appendChild(plantCard);
