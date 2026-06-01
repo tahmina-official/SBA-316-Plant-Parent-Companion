@@ -39,3 +39,11 @@ const plantCounterText =
 let plantCollection =
     JSON.parse(localStorage.getItem("plantVault"))
     || [];
+
+// ======================================
+// INITIAL RENDER
+// ======================================
+
+renderPlantCards(plantCollection);
+
+updatePlantCounter();
