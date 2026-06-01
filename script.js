@@ -282,3 +282,30 @@ function searchPlants() {
 
   renderPlantCards(matchedPlants);
 }
+
+// ======================================
+// FILTER
+// ======================================
+
+function filterPlants(event) {
+
+  const selectedLight =
+    event.target.dataset.light;
+
+  if (selectedLight === "All") {
+
+    renderPlantCards(plantCollection);
+
+    return;
+  }
+
+  const filteredPlants =
+    plantCollection.filter((plant) => {
+
+      return (
+        plant.sunlight === selectedLight
+      );
+    });
+
+  renderPlantCards(filteredPlants);
+}
