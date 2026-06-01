@@ -58,13 +58,13 @@ button {
   cursor: pointer;
 }
 
-#waterInput {
-  width: 180px;
-}
-
 #validationMessage {
   color: red;
   margin-top: 10px;
+}
+
+#waterInput {
+  width: 180px;
 }
 
 .control-panel {
@@ -83,6 +83,8 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
+
+
 
 .plant-card {
   background: white;
@@ -119,4 +121,5 @@ body.darkMode .plant-card {
   background: crimson;
   color: white;
 }
+
 

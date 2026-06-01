@@ -3,42 +3,44 @@
 // ======================================
 
 const plantTrackerForm =
-    document.getElementById("plantTrackerForm");
+  document.getElementById("plantTrackerForm");
 
 const plantNameInput =
-    document.getElementById("plantNameInput");
+  document.getElementById("plantNameInput");
 
 const sunlightSelect =
-    document.getElementById("sunlightSelect");
+  document.getElementById("sunlightSelect");
 
 const waterInput =
-    document.getElementById("waterInput");
-
-const validationMessage =
-    document.getElementById("validationMessage");
-
-const searchPlantInput =
-    document.getElementById("searchPlantInput");
-
-const filterButtons =
-    document.querySelectorAll(".filterButton");
-
-const themeToggleBtn =
-    document.getElementById("themeToggleBtn");
+  document.getElementById("waterInput");
 
 const plantCardContainer =
-    document.querySelector(".plantCardContainer");
+  document.querySelector(".plantCardContainer");
 
 const plantCounterText =
-    document.getElementById("plantCounterText");
+  document.getElementById("plantCounterText");
+
+const validationMessage =
+  document.getElementById("validationMessage");
+
+const searchPlantInput =
+  document.getElementById("searchPlantInput");
+
+const filterButtons =
+  document.querySelectorAll(".filterButton");
+
+const themeToggleBtn =
+  document.getElementById("themeToggleBtn");
+
 
 // ======================================
 // LOCAL STORAGE
 // ======================================
 
 let plantCollection =
-    JSON.parse(localStorage.getItem("plantVault"))
-    || [];
+  JSON.parse(localStorage.getItem("plantVault"))
+  || [];
+
 
 // ======================================
 // INITIAL RENDER
@@ -48,6 +50,7 @@ renderPlantCards(plantCollection);
 
 updatePlantCounter();
 
+
 // ======================================
 // EVENT LISTENERS
 // ======================================
@@ -56,6 +59,25 @@ plantTrackerForm.addEventListener(
   "submit",
   addPlantCard
 );
+
+searchPlantInput.addEventListener(
+  "input",
+  searchPlants
+);
+
+themeToggleBtn.addEventListener(
+  "click",
+  toggleThemeMode
+);
+
+filterButtons.forEach((singleButton) => {
+
+  singleButton.addEventListener(
+    "click",
+    filterPlants
+  );
+});
+
 
 // ======================================
 // ADD PLANT
@@ -111,6 +133,7 @@ function addPlantCard(event) {
 
   plantTrackerForm.reset();
 }
+
 
 // ======================================
 // RENDER CARDS
@@ -194,6 +217,7 @@ function renderPlantCards(plantArray) {
       }
     );
 
+
     // DELETE CARD
     removeBtn.addEventListener(
       "click",
@@ -241,27 +265,6 @@ function renderPlantCards(plantArray) {
   );
 }
 
-// ======================================
-// UPDATE COUNTER
-// ======================================
-
-function updatePlantCounter() {
-
-  plantCounterText.textContent =
-    `Total Plants: ${plantCollection.length}`;
-}
-
-// ======================================
-// SAVE LOCAL STORAGE
-// ======================================
-
-function savePlantData() {
-
-  localStorage.setItem(
-    "plantVault",
-    JSON.stringify(plantCollection)
-  );
-}
 
 // ======================================
 // SEARCH
@@ -282,6 +285,7 @@ function searchPlants() {
 
   renderPlantCards(matchedPlants);
 }
+
 
 // ======================================
 // FILTER
@@ -309,6 +313,31 @@ function filterPlants(event) {
 
   renderPlantCards(filteredPlants);
 }
+
+
+// ======================================
+// UPDATE COUNTER
+// ======================================
+
+function updatePlantCounter() {
+
+  plantCounterText.textContent =
+    `Total Plants: ${plantCollection.length}`;
+}
+
+
+// ======================================
+// SAVE LOCAL STORAGE
+// ======================================
+
+function savePlantData() {
+
+  localStorage.setItem(
+    "plantVault",
+    JSON.stringify(plantCollection)
+  );
+}
+
 
 // ======================================
 // DARK MODE
