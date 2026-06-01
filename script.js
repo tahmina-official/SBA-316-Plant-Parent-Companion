@@ -194,6 +194,45 @@ function renderPlantCards(plantArray) {
       }
     );
 
+        // DELETE CARD
+    removeBtn.addEventListener(
+      "click",
+      function(event) {
+
+        const confirmDelete =
+          confirm(
+            "Remove this plant?"
+          );
+
+        if (!confirmDelete) {
+          return;
+        }
+
+        const selectedCard =
+          event.target.parentNode.parentNode;
+
+        const selectedId =
+          Number(
+            selectedCard.getAttribute(
+              "data-id"
+            )
+          );
+
+        plantCollection =
+          plantCollection.filter(
+            (plant) => {
+
+            return plant.id !== selectedId;
+          });
+
+        selectedCard.remove();
+
+        savePlantData();
+
+        updatePlantCounter();
+      }
+    );
+
     cardFragment.appendChild(plantCard);
   });
 
