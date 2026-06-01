@@ -194,7 +194,7 @@ function renderPlantCards(plantArray) {
       }
     );
 
-        // DELETE CARD
+    // DELETE CARD
     removeBtn.addEventListener(
       "click",
       function(event) {
@@ -261,4 +261,24 @@ function savePlantData() {
     "plantVault",
     JSON.stringify(plantCollection)
   );
+}
+
+// ======================================
+// SEARCH
+// ======================================
+
+function searchPlants() {
+
+  const typedValue =
+    searchPlantInput.value.toLowerCase();
+
+  const matchedPlants =
+    plantCollection.filter((plant) => {
+
+      return plant.plantName
+        .toLowerCase()
+        .includes(typedValue);
+    });
+
+  renderPlantCards(matchedPlants);
 }
